@@ -1,0 +1,1 @@
+START /B PubSubSample.Subscriber.Host\bin\PubSubSample.Subscriber.Host.exe
