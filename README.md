@@ -10,11 +10,13 @@ Visual Studio solution file path: \PubSubServerExercise\Source\PubSubSample.sln
 You can compile the application, it should install the packages from NuGet during compilation. Once solution is compiled, it will produce 3 executables (Windows form applications)
 
 **PubSub Server**
- - \PubSubServerExercise\Source\PubSubSample.PubSubServer.Host\bin\PubSubSample.PubSubServer.Host.exe
+\PubSubServerExercise\Source\PubSubSample.PubSubServer.Host\bin\PubSubSample.PubSubServer.Host.exe
+
 **Publisher**
- - \PubSubServerExercise\Source\PubSubSample.Publisher.Host\bin\PubSubSample.Publisher.Host.exe
+\PubSubServerExercise\Source\PubSubSample.Publisher.Host\bin\PubSubSample.Publisher.Host.exe
+
 **Subscriber**
- - \PubSubServerExercise\Source\PubSubSample.Subscriber.Host\bin\PubSubSample.Subscriber.Host.exe
+\PubSubServerExercise\Source\PubSubSample.Subscriber.Host\bin\PubSubSample.Subscriber.Host.exe
   
 ## Testing the output:
  To view the run-time behaviour of the solution, you can click the pre-created bat files located at the path `\PubSubServerExercise\Source`.
@@ -26,7 +28,7 @@ You can compile the application, it should install the packages from NuGet durin
 ### PubSubServer
 When `0_Launcher.bat` is launched, it will open a Windows form application that will host services for subscribers and publishers. The window form will remain open and different messages will be displayed as different operations are performed. When you launch this first time, it might ask you for permissions based on your OS.
 
-[pubsub-server.png]
+![PubSubServer](https://github.com/devsitecore/PubSubServerExercise/raw/master/Documentation/pubsub-server.png?raw=true)
 
 PubSubServer is the centeral component of this solution. There is one way communication between Publisher and the PubSubServer, Publisher can only publish messages over to PubSubServer where each message is tagged with a topic.
 
@@ -36,7 +38,8 @@ There is two way communication between Subscriber and the PubSubServer, a subscr
 
 ### Publisher
 By default one Publisher will be opened but you can open multiple Publishers too in order to fully test the functionality.
-[publisher.png]
+
+![Publisher](https://github.com/devsitecore/PubSubServerExercise/raw/master/Documentation/publisher.png?raw=true)
 
 From each Pubsliher application, you can send messages based on a Topic. Publisher does not have any knowledge about the subscribers, it will just send the message with the topic over to PubSubServer.
 
@@ -44,11 +47,12 @@ From each Pubsliher application, you can send messages based on a Topic. Publish
 
 ### Subscriber
 By default one Subscriber will be opened but you can open multiple Subscribers too in order to fully test the functionality.
-[subscriber.png]
+
+![Subscriber](https://github.com/devsitecore/PubSubServerExercise/raw/master/Documentation/subscriber.png?raw=true)
 
 On the Subscriber application, you can subscribe to a topic. Once topic is subscribed, the subscriber will be in ready state to receive messages for the subscribed topic. You can unscriber and subscribe to a different topic too.
 
-[subscriber-messages.png]
+![Subscriber](https://github.com/devsitecore/PubSubServerExercise/raw/master/Documentation/subscriber-messages.png?raw=true)
 
 *You can launch multiple subscribers*
 
