@@ -1,6 +1,6 @@
 # PubSubServerExercise - Demo Implementation
 
-[You can view requirements for this task here] (https://github.com/devsitecore/PubSubServerExercise/blob/master/Requirements.md)
+[You can view requirements for this task here](https://github.com/devsitecore/PubSubServerExercise/blob/master/Requirements.md)
 
 ## Opening the solution:
 Once you download the files, you can open the solution in Visual Studio 2015 or above.
