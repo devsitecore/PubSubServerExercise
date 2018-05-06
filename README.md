@@ -1,5 +1,8 @@
 # PubSubServerExercise - Demo Implementation
 
+## Introduction:
+PubSubServer implementation is added by using Windows forms and utilizing Windows communication foundation to communicate between different components of the solution. This document will describe on how to test the solution.
+
 [You can view requirements for this task here](https://github.com/devsitecore/PubSubServerExercise/blob/master/Requirements.md)
 
 ## Opening the solution:
