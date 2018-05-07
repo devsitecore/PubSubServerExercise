@@ -1,7 +1,13 @@
 # PubSubServerExercise - Demo Implementation
 
 ## Introduction:
-PubSubServer implementation is added by using Windows forms and utilizing Windows communication foundation to communicate between different components of the solution. This document will describe on how to test the solution.
+This project contains sample implementation of topic based PubSubServer pattern. The project consists of three parts
+
+ - PubSubServer
+ - Publisher
+ - Subscriber
+
+Three parts are developed as Windows forms and communication between these components is done using Windows communication foundation. This document will describe on to test the solution.
 
 [You can view requirements for this task here](https://github.com/devsitecore/PubSubServerExercise/blob/master/Requirements.md)
 
