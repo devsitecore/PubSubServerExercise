@@ -19,7 +19,7 @@ namespace PubSubSample.PubSubServer
         #region "Private Members"
         private readonly Guid reference;
         private readonly IProxyManager proxyManager;
-        private Dictionary<string, List<ISubscription>> subscribersList = new Dictionary<string, List<ISubscription>>();
+        private readonly Dictionary<string, List<ISubscription>> subscribersList = new Dictionary<string, List<ISubscription>>();
         #endregion
 
         #region "Constructor"
@@ -35,7 +35,7 @@ namespace PubSubSample.PubSubServer
         }
         #endregion
 
-        #region "Private Properties"
+        #region "Protected Properties"
 
         /// <summary>
         /// Gets the subscribers list.
@@ -43,16 +43,7 @@ namespace PubSubSample.PubSubServer
         /// <value>
         /// The subscribers list.
         /// </value>
-        private Dictionary<string, List<ISubscription>> SubscribersList
-        {
-            get
-            {
-                lock (typeof(PubSubFilter))
-                {
-                    return this.subscribersList;
-                }
-            }
-        }
+        protected virtual Dictionary<string, List<ISubscription>> SubscribersList => this.subscribersList;
         #endregion
 
         #region "IPubSubFilter Implementation"
@@ -62,7 +53,7 @@ namespace PubSubSample.PubSubServer
         /// </summary>
         /// <param name="message">The message.</param>
         /// <param name="topic">The topic.</param>
-        public void Publish(PubSubMessage message, string topic)
+        public virtual void Publish(PubSubMessage message, string topic)
         {
             this.proxyManager.NotifyHost(string.Format("New message is published for the topic {0}.", topic));
 
@@ -82,7 +73,7 @@ namespace PubSubSample.PubSubServer
         /// </summary>
         /// <param name="topic">The topic.</param>
         /// <param name="subscriberCallbackReference">The subscriber callback reference.</param>
-        public void AddSubscriber(string topic, ISubscription subscriberCallbackReference)
+        public virtual void AddSubscriber(string topic, ISubscription subscriberCallbackReference)
         {
             this.proxyManager.NotifyHost(string.Format("New subscriber for the topic {0}.", topic));
 
@@ -109,7 +100,7 @@ namespace PubSubSample.PubSubServer
         /// </summary>
         /// <param name="topic">The topic.</param>
         /// <param name="subscriberCallbackReference">The subscriber callback reference.</param>
-        public void RemoveSubscriber(string topic, ISubscription subscriberCallbackReference)
+        public virtual void RemoveSubscriber(string topic, ISubscription subscriberCallbackReference)
         {
             this.proxyManager.NotifyHost(string.Format("Subscriber removed from the topic {0}.", topic));
 
